@@ -1,1 +1,12 @@
 build
+builddir
+.*
+debian/htmlToXBel
+debian/htmltoxbel
+debian/htmltoxbel.debhelper.log
+debian/*.ex
+debian/*.EX
+debian/debhelper-build-stamp
+obj-*
+CMakeCache.txt
+*.o

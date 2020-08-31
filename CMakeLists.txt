@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.13)
-
 project(htmlToXBel)
+include(GNUInstallDirs)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
@@ -9,6 +9,9 @@ find_package(Qt5Core REQUIRED)
 find_package(Qt5WebEngine REQUIRED)
 find_package(Qt5WebEngineWidgets REQUIRED)
 add_executable(htmlToXBel main.cpp mainapp.cpp source.qrc)
+install(TARGETS htmlToXBel
+    DESTINATION ${CMAKE_INSTALL_BINDIR}
+    )
 qt5_use_modules(htmlToXBel Core)
 qt5_use_modules(htmlToXBel WebEngine)
 qt5_use_modules(htmlToXBel WebEngineWidgets)

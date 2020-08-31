@@ -1,0 +1,18 @@
+Source: htmltoxbel
+Section: web
+Priority: optional
+Maintainer: Aaron Dewes <aaron.dewes@web.de>
+Build-Depends: debhelper-compat (= 13), qtbase5-dev (>= 5.14), cmake (>= 3.16), qtwebengine5-dev (>= 5.14)
+Standards-Version: 4.5.0
+Homepage: https://github.com/EndorphinBrowser/htmlToXBel
+Vcs-Browser: https://github.com/EndorphinBrowser/htmlToXBel
+Vcs-Git: https://github.com/EndorphinBrowser/htmlToXBel.git
+Rules-Requires-Root: no
+
+Package: htmltoxbel
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqt5webengine5 (>= 5.14), libqt5webenginecore5 (>= 5.14), libqt5webenginewidgets5 (>= 5.14)
+Description:This is a tool to convert html bookmarks into the xbel format.
+ Many browser have the ability to export their bookmarks as a html file.
+ htmlToXBel takes that file as an input and will output those bookmarks
+ in the XML Bookmark Exchange Language (XBEL) format.
